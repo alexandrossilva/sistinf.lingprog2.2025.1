@@ -1,2 +1,8 @@
 notas-aula/src/.classpath
 notas-aula/src/.project
+aulas/.classpath
+aulas/.gitignore
+.gitignore
+*.class
+.gitignore
+aulas/.project
