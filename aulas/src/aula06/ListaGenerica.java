@@ -15,24 +15,13 @@ public class ListaGenerica <E> {
 	}
 	
 	// inserção de novo elemento na lista
-	public void adicionar(E elemento, int posicao) throws Exception, IllegalArgumentException {
+	public void adicionar(E elemento) throws Exception {
 		// lançamento de exceção em caso de capacidade máxima alcançada
 		if (qtd == v.length) {
 			throw new Exception("Capacidade máxima alcançada!");
 		}
-		// lançamento de exceção em caso de indicação de posição inválida
-		else if (posicao > v.length) {
-			throw new IllegalArgumentException("Posição de inserção inválida!");			
-		}
-		else {
-			// deslocamento de elementos já inseridos (a partir da posição de inserção do novo elemento)
-			for (int i = qtd; i > posicao; i--) {
-				v[i] = v[i - 1];	// deslocamento de enésimo elemento				
-			}
-			
-			v[qtd] = elemento;		// atribuíção de elemento
-			qtd++;					// atualização de quantidade de elementos inseridos na lista			
-		}		
+		v[qtd] = elemento;	// atribuíção de elemento
+		qtd++;				// atualização de quantidade de elementos inseridos na lista
 	}
 	
 	// retorno de tamanho da lista
