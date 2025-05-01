@@ -1,10 +1,10 @@
-package aula06;
+package aula08;
 
 // Instanciação e manipulação de listas de vários tipos
 public class ListaGenericaUtil {
 
 	public static void main(String[] args) {
-		ListaGenerica<String> lista 	= new ListaGenerica<String>(4);		// lista de strings
+		ListaGenerica<String> lista 	= new ListaGenerica<String>(10);		// lista de strings
 		
 		try {
 			lista.adicionar("Maria", 0);		// inserção de primeira string

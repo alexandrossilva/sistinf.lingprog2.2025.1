@@ -1,4 +1,4 @@
-package aula06;
+package aula08;
 
 // Lista genérica de elementos (tipo a ser definido no momento da instanciação)
 public class ListaGenerica <E> {
@@ -21,7 +21,7 @@ public class ListaGenerica <E> {
 			throw new Exception("Capacidade máxima alcançada!");
 		}
 		// lançamento de exceção em caso de indicação de posição inválida
-		else if (posicao > v.length) {
+		else if (posicao > qtd) {
 			throw new IllegalArgumentException("Posição de inserção inválida!");			
 		}
 		else {
@@ -30,7 +30,7 @@ public class ListaGenerica <E> {
 				v[i] = v[i - 1];	// deslocamento de enésimo elemento				
 			}
 			
-			v[qtd] = elemento;		// atribuíção de elemento
+			v[posicao] = elemento;	// atribuíção de elemento
 			qtd++;					// atualização de quantidade de elementos inseridos na lista			
 		}		
 	}
