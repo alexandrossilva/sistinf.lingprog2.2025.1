@@ -53,12 +53,16 @@ public class Candidato {
 	}
 
 	@Override
+	// retorno de equivalência (true) ou não (false) de objeto com outro passado como parâmetro
 	public boolean equals(Object outroObjeto) {
+		// se objeto passado como parâmetro não pertencer à classe Candidato...
 		if (!(outroObjeto instanceof Candidato)) {
-			return false;			
+			return false;			// retorno de false (objetos não são equivalentes)
 		}
+		// caso contrário (objeto passado como parâmetro pertence à classe Candidato)...
 		else {
 			Candidato outroCandidato = (Candidato)outroObjeto;
+			// retorno da comparação de atributos com atributos do objeto passado como parâmetro
 			return outroCandidato.numero == this.numero &&
 					outroCandidato.nome.equals(this.nome) &&
 					outroCandidato.idade == this.idade &&
